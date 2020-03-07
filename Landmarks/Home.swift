@@ -38,7 +38,9 @@ struct CategoryHome: View {
                 ForEach(categories.keys.sorted(), id: \.self) { key in
                     CategoryRow(categoryName: key, items: self.categories[key]!)
                 }.listRowInsets(EdgeInsets())
-                NavigationLink(destination: LandmarkList()) {
+                NavigationLink(destination: LandmarkList {
+                    LandmarkDetail(landmark: $0)
+                }) {
                     Text("See All")
                 }
                 

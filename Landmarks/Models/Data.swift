@@ -1,14 +1,14 @@
-//
-//  Data.swift
-//  Landmarks
-//
-//  Created by Ezra Bathini on 6/03/20.
-//  Copyright © 2020 Ezra Bathini. All rights reserved.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+Helpers for loading images and data.
+*/
 
 import Foundation
 import CoreLocation
 import SwiftUI
+import ImageIO
 
 let landmarkData: [Landmark] = load("landmarkData.json")
 let features = landmarkData.filter { $0.isFeatured }
